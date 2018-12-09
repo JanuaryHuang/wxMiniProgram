@@ -1,0 +1,15 @@
+<!--pages/initialPage/initialPage.wxml-->
+<text>Choose a picture and start right now!</text>
+
+
+<view class="container">
+  <image class="bgPic" wx:if="{{bgPic}}" src="{{bgPic}}"></image>
+  <view class="emptyBg" wx:else></view>
+</view>
+
+  <view class="buttonContainer">
+    <button data-way="avatar" bind:tap="getAvatar">Use Avatar</button>
+    <button data-way="camera" bind:tap="chooseImage">Use Camera</button>
+    <button data-way="album" bind:tap="chooseImage">From Album</button>
+    <button bind:tap="nextPage" disabled="{{!picChoosed}}">I am ready!</button>
+  </view>
